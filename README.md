@@ -1,6 +1,6 @@
 <h1>Android Holo ColorPicker</h1>
 
-Marie Schweiz made a beautifull new design for the Holo ColorPicker which added a lot of new functionality.
+Marie Schweiz <http://marie-schweiz.de/> made a beautifull new design for the Holo ColorPicker which added a lot of new functionality.
 
 You can now set the Saturation and Value of a color.
 Also its possible to set the Opacity for a color.
@@ -12,16 +12,17 @@ Demo can be found on my Google Drive [here](https://docs.google.com/file/d/0Bwcl
 ![image](https://lh6.googleusercontent.com/-Rn5TDr6QoG4/UQk8OPpsPEI/AAAAAAAAAX0/TKlibuBjupo//framed_HoloColorPicker.png)
 ![image](https://lh4.googleusercontent.com/-GtJYDCQdnVo/UVW4ML7WIuI/AAAAAAAAAj4/YKHEUnhvLhA//framed_colorpicker.png)
 
+<h3>UDPATE</h3>
+Now bars can change there orientation, Thanks to [tonyr59h](https://github.com/tonyr59h)
+also the gradle build version was updated to 0.7.+
+![image](https://lh5.googleusercontent.com/-3KSukk_S94Y/UvKiNER-OBI/AAAAAAAAA-k/8SPfOmFhLjE//device-2014-02-05-180704_framed.png)
+
 
 <h2>Documentation</h2>
-<h3>UDPATE</h3>
-Added support for a SaturationBar and ValueBar.
-
-<br>
 
 To add the ColorPicker to your layout add this to your xml
 ```xml
-<com.larswerkman.colorpicker.ColorPicker
+<com.larswerkman.holocolorpicker.ColorPicker
     android:id="@+id/picker"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
@@ -29,14 +30,14 @@ To add the ColorPicker to your layout add this to your xml
         
 To add a Saturation/Value bar to your layout add this to your xml
 ```xml
-<com.larswerkman.colorpicker.SVBar
+<com.larswerkman.holocolorpicker.SVBar
     android:id="@+id/svbar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
 ```       
 The same goes for the Opacity bar
 ```xml
-<com.larswerkman.colorpicker.OpacityBar
+<com.larswerkman.holocolorpicker.OpacityBar
     android:id="@+id/opacitybar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
@@ -44,7 +45,7 @@ The same goes for the Opacity bar
 
 Saturation bar
 ```xml
-<com.larswerkman.colorpicker.SaturationBar
+<com.larswerkman.holocolorpicker.SaturationBar
     android:id="@+id/saturationbar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
@@ -52,7 +53,7 @@ Saturation bar
 
 and a Value bar
 ```xml
-<com.larswerkman.colorpicker.ValueBar
+<com.larswerkman.holocolorpicker.ValueBar
     android:id="@+id/valuebar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
@@ -79,7 +80,23 @@ picker.setOldCenterColor(picker.getColor());
 // adds listener to the colorpicker which is implemented
 //in the activity
 picker.setOnColorChangedListener(this);
+
+//to turn of showing the old color
+picker.setShowOldCenterColor(false);
+
+//adding onChangeListeners to bars
+opacitybar.setOnOpacityChangeListener(new OnOpacityChangeListener …)
+valuebar.setOnValueChangeListener(new OnValueChangeListener …)
+saturationBar.setOnSaturationChangeListener(new OnSaturationChangeListener …)
 ```	
+
+<H2>Dependency</H2>
+Adding it as a dependency to your project.
+
+	dependencies {
+    	compile 'com.larswerkman:HoloColorPicker:1.4'
+	}
+
 <H2>License</H2>
 	
  	 Copyright 2012 Lars Werkman
