@@ -54,8 +54,13 @@ public class ColorPicker extends View {
 	/**
 	 * Colors to construct the color wheel using {@link android.graphics.SweepGradient}.
 	 */
-	private static final int[] COLORS = new int[] { 0xFFFF0000, 0xFFFF00FF,
-			0xFF0000FF, 0xFF00FFFF, 0xFF00FF00, 0xFFFFFF00, 0xFFFF0000 };
+	// private static final int[] COLORS = new int[] { 0xFFFF0000, 0xFFFF00FF,
+	// 		0xFF0000FF, 0xFF00FFFF, 0xFF00FF00, 0xFFFFFF00, 0xFFFF0000 };
+
+	// 2015 CES Demo Color
+	// private static final int[] COLORS = new int[] { 0xFFFFFFFF, 0xFFFFFF00, 0xFF1E90FF };
+	private static final int[] COLORS = new int[] { 0xFFFFFFFF, 0xFFFFFF00};
+			
 
 	/**
 	 * {@code Paint} instance used to draw the color wheel.
